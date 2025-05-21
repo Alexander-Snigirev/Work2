@@ -1,0 +1,1536 @@
+
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ echo 'Выполнил: zkarajaz'
+[Чт 8 май 2025 MSK] Выполнил: karaja@zkarajaz
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ echo 'Аппаратура: Model name:                           AMD Ryzen 7 6800H with Radeon Graphics'
+[Чт 8 май 2025 MSK] Аппаратура: Model name:                           AMD Ryzen 7 6800H with Radeon Graphics
+
+#II.Основы работы c командным интерфейсом.
+#1. Введите следующие информационные команды для получения полезных сведений об ОС и текущем сеансе:
+#вывод текущей даты
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ date
+[Чт 8 май 2025 MSK] Thu Чт 8 май 2025 MSK AM MSK 2025
+#кто находится в системе
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ who
+[Чт 8 май 2025 MSK] zkarajaz tty7         2025-05-08 19:46 (:0)
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ whoami
+[Чт 8 май 2025 MSK] zkarajaz
+#полное имя файла-терминала
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ tty
+[Чт 8 май 2025 MSK] /dev/pts/0
+#входное имя
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ logname
+[Чт 8 май 2025 MSK] zkarajaz
+#имя  UNIX-системы
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ uname
+[Чт 8 май 2025 MSK] Linux
+#информация о процессорах/ядрах компьютера или виртуальной машины
+karaja@zkarajaz:~$ lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          48 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   1
+  On-line CPU(s) list:    0
+Vendor ID:                AuthenticAMD
+  Model name:             AMD Ryzen 5 3600 6-Core Processor
+    CPU family:           23
+    Model:                113
+    Thread(s) per core:   1
+    Core(s) per socket:   1
+    Socket(s):            1
+    Stepping:             0
+    BogoMIPS:             7186.50
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge m
+                          ca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall
+                           nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good no
+                          pl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pc
+                          lmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic mo
+                          vbe popcnt aes xsave avx f16c rdrand hypervisor lahf_l
+                          m cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd 
+                          vmmcall fsgsbase bmi1 avx2 bmi2 rdseed adx clflushopt 
+                          sha_ni arat
+Virtualization features:  
+  Hypervisor vendor:      KVM
+  Virtualization type:    full
+Caches (sum of all):      
+  L1d:                    32 KiB (1 instance)
+  L1i:                    32 KiB (1 instance)
+  L2:                     512 KiB (1 instance)
+  L3:                     32 MiB (1 instance)
+NUMA:                     
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Mitigation; untrained return thunk; SMT disabled
+  Spec rstack overflow:   Vulnerable: Safe RET, no microcode
+  Spec store bypass:      Not affected
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointe
+                          r sanitization
+  Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; P
+                          BRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+karaja@zkarajaz:~$
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ sudo lshw
+[Чт 8 май 2025 MSK] zkarajaz-rog-strix-g513rm-g513rm
+[Чт 8 май 2025 MSK]     description: Notebook
+[Чт 8 май 2025 MSK]     product: ROG Strix G513RM_G513RM
+[Чт 8 май 2025 MSK]     vendor: ASUSTeK COMPUTER INC.
+[Чт 8 май 2025 MSK]     version: 1.0
+[Чт 8 май 2025 MSK]     serial: NCNRKD000503497
+[Чт 8 май 2025 MSK]     width: 64 bits
+[Чт 8 май 2025 MSK]     capabilities: smbios-3.4.0 dmi-3.4.0 smp vsyscall32
+[Чт 8 май 2025 MSK]     configuration: boot=normal chassis=notebook family=ROG Strix uuid=d7199a89-b6c1-5d44-aa4d-b853482e2099
+[Чт 8 май 2025 MSK]   *-core
+[Чт 8 май 2025 MSK]        description: Motherboard
+[Чт 8 май 2025 MSK]        product: G513RM
+[Чт 8 май 2025 MSK]        vendor: ASUSTeK COMPUTER INC.
+[Чт 8 май 2025 MSK]        physical id: 0
+[Чт 8 май 2025 MSK]        version: 1.0
+[Чт 8 май 2025 MSK]        serial: ALS2ZMC003T
+[Чт 8 май 2025 MSK]        slot: Default string
+[Чт 8 май 2025 MSK]      *-firmware
+[Чт 8 май 2025 MSK]           description: BIOS
+[Чт 8 май 2025 MSK]           vendor: American Megatrends International, LLC.
+[Чт 8 май 2025 MSK]           physical id: 0
+[Чт 8 май 2025 MSK]           version: G513RM.327
+[Чт 8 май 2025 MSK]           date: 02/16/2023
+[Чт 8 май 2025 MSK]           size: 64KiB
+[Чт 8 май 2025 MSK]           capacity: 32MiB
+[Чт 8 май 2025 MSK]           capabilities: pci upgrade shadowing cdboot bootselect socketedrom edd biosbootspecification uefi
+[Чт 8 май 2025 MSK]      *-cache:0
+[Чт 8 май 2025 MSK]           description: L1 cache
+[Чт 8 май 2025 MSK]           physical id: a
+[Чт 8 май 2025 MSK]           slot: L1 - Cache
+[Чт 8 май 2025 MSK]           size: 512KiB
+[Чт 8 май 2025 MSK]           capacity: 512KiB
+[Чт 8 май 2025 MSK]           clock: 1GHz (1.0ns)
+[Чт 8 май 2025 MSK]           capabilities: pipeline-burst internal write-back unified
+[Чт 8 май 2025 MSK]           configuration: level=1
+[Чт 8 май 2025 MSK]      *-cache:1
+[Чт 8 май 2025 MSK]           description: L2 cache
+[Чт 8 май 2025 MSK]           physical id: b
+[Чт 8 май 2025 MSK]           slot: L2 - Cache
+[Чт 8 май 2025 MSK]           size: 4MiB
+[Чт 8 май 2025 MSK]           capacity: 4MiB
+[Чт 8 май 2025 MSK]           clock: 1GHz (1.0ns)
+[Чт 8 май 2025 MSK]           capabilities: pipeline-burst internal write-back unified
+[Чт 8 май 2025 MSK]           configuration: level=2
+[Чт 8 май 2025 MSK]      *-cache:2
+[Чт 8 май 2025 MSK]           description: L3 cache
+[Чт 8 май 2025 MSK]           physical id: c
+[Чт 8 май 2025 MSK]           slot: L3 - Cache
+[Чт 8 май 2025 MSK]           size: 16MiB
+[Чт 8 май 2025 MSK]           capacity: 16MiB
+[Чт 8 май 2025 MSK]           clock: 1GHz (1.0ns)
+[Чт 8 май 2025 MSK]           capabilities: pipeline-burst internal write-back unified
+[Чт 8 май 2025 MSK]           configuration: level=3
+[Чт 8 май 2025 MSK]      *-cpu
+[Чт 8 май 2025 MSK]           description: CPU
+[Чт 8 май 2025 MSK]           product: AMD Ryzen 7 6800H with Radeon Graphics
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices [AMD]
+[Чт 8 май 2025 MSK]           physical id: d
+[Чт 8 май 2025 MSK]           bus info: cpu@0
+[Чт 8 май 2025 MSK]           version: 25.68.1
+[Чт 8 май 2025 MSK]           serial: Unknown
+[Чт 8 май 2025 MSK]           slot: FP7
+[Чт 8 май 2025 MSK]           size: 4159MHz
+[Чт 8 май 2025 MSK]           capacity: 4785MHz
+[Чт 8 май 2025 MSK]           width: 64 bits
+[Чт 8 май 2025 MSK]           clock: 100MHz
+[Чт 8 май 2025 MSK]           capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp x86-64 constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap cpufreq
+[Чт 8 май 2025 MSK]           configuration: cores=8 enabledcores=8 microcode=171983106 threads=16
+[Чт 8 май 2025 MSK]      *-memory
+[Чт 8 май 2025 MSK]           description: System Memory
+[Чт 8 май 2025 MSK]           physical id: f
+[Чт 8 май 2025 MSK]           slot: System board or motherboard
+[Чт 8 май 2025 MSK]           size: 16GiB
+[Чт 8 май 2025 MSK]         *-bank:0
+[Чт 8 май 2025 MSK]              description: SODIMM Synchronous Unbuffered (Unregistered) 4800 MHz (0,2 ns)
+[Чт 8 май 2025 MSK]              product: M425R2GA3BB0-CQKOL
+[Чт 8 май 2025 MSK]              vendor: Samsung
+[Чт 8 май 2025 MSK]              physical id: 0
+[Чт 8 май 2025 MSK]              serial: 033E7E8F
+[Чт 8 май 2025 MSK]              slot: DIMM 0
+[Чт 8 май 2025 MSK]              size: 16GiB
+[Чт 8 май 2025 MSK]              width: 64 bits
+[Чт 8 май 2025 MSK]              clock: 505MHz (2.0ns)
+[Чт 8 май 2025 MSK]         *-bank:1
+[Чт 8 май 2025 MSK]              description: [empty]
+[Чт 8 май 2025 MSK]              product: Unknown
+[Чт 8 май 2025 MSK]              vendor: Unknown
+[Чт 8 май 2025 MSK]              physical id: 1
+[Чт 8 май 2025 MSK]              serial: Unknown
+[Чт 8 май 2025 MSK]              slot: DIMM 0
+[Чт 8 май 2025 MSK]      *-pci:0
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Family 17h-19h PCIe Root Complex
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 100
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:00.0
+[Чт 8 май 2025 MSK]           version: 01
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]         *-generic UNCLAIMED
+[Чт 8 май 2025 MSK]              description: IOMMU
+[Чт 8 май 2025 MSK]              product: Family 17h-19h IOMMU
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 0.2
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:00.2
+[Чт 8 май 2025 MSK]              version: 00
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: msi ht bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: latency=0
+[Чт 8 май 2025 MSK]         *-pci:0
+[Чт 8 май 2025 MSK]              description: PCI bridge
+[Чт 8 май 2025 MSK]              product: Family 17h-19h PCIe GPP Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 1.1
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:01.1
+[Чт 8 май 2025 MSK]              version: 00
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: pci pm pciexpress msi ht normal_decode bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: driver=pcieport
+[Чт 8 май 2025 MSK]              resources: irq:33 ioport:f000(size=4096) memory:fb000000-fc0fffff ioport:7c00000000(size=8623489024)
+[Чт 8 май 2025 MSK]            *-display
+[Чт 8 май 2025 MSK]                 description: VGA compatible controller
+[Чт 8 май 2025 MSK]                 product: GA106M [GeForce RTX 3060 Mobile / Max-Q]
+[Чт 8 май 2025 MSK]                 vendor: NVIDIA Corporation
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:01:00.0
+[Чт 8 май 2025 MSK]                 logical name: /dev/fb0
+[Чт 8 май 2025 MSK]                 version: a1
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm msi pciexpress vga_controller bus_master cap_list rom fb
+[Чт 8 май 2025 MSK]                 configuration: depth=32 driver=nvidia latency=0 mode=2560x1440 visual=truecolor xres=2560 yres=1440
+[Чт 8 май 2025 MSK]                 resources: iomemory:7c0-7bf iomemory:7e0-7df irq:76 memory:fb000000-fbffffff memory:7c00000000-7dffffffff memory:7e00000000-7e01ffffff ioport:f000(size=128) memory:fc000000-fc07ffff
+[Чт 8 май 2025 MSK]            *-multimedia
+[Чт 8 май 2025 MSK]                 description: Audio device
+[Чт 8 май 2025 MSK]                 product: GA106 High Definition Audio Controller
+[Чт 8 май 2025 MSK]                 vendor: NVIDIA Corporation
+[Чт 8 май 2025 MSK]                 physical id: 0.1
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:01:00.1
+[Чт 8 май 2025 MSK]                 logical name: card0
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/controlC0
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/hwC0D0
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/pcmC0D3p
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/pcmC0D7p
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/pcmC0D8p
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/pcmC0D9p
+[Чт 8 май 2025 MSK]                 version: a1
+[Чт 8 май 2025 MSK]                 width: 32 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm msi pciexpress bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=snd_hda_intel latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:51 memory:fc080000-fc083fff
+[Чт 8 май 2025 MSK]               *-input:0
+[Чт 8 май 2025 MSK]                    product: HDA NVidia HDMI/DP,pcm=3
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    logical name: input23
+[Чт 8 май 2025 MSK]                    logical name: /dev/input/event15
+[Чт 8 май 2025 MSK]               *-input:1
+[Чт 8 май 2025 MSK]                    product: HDA NVidia HDMI/DP,pcm=7
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    logical name: input24
+[Чт 8 май 2025 MSK]                    logical name: /dev/input/event16
+[Чт 8 май 2025 MSK]               *-input:2
+[Чт 8 май 2025 MSK]                    product: HDA NVidia HDMI/DP,pcm=8
+[Чт 8 май 2025 MSK]                    physical id: 2
+[Чт 8 май 2025 MSK]                    logical name: input25
+[Чт 8 май 2025 MSK]                    logical name: /dev/input/event17
+[Чт 8 май 2025 MSK]               *-input:3
+[Чт 8 май 2025 MSK]                    product: HDA NVidia HDMI/DP,pcm=9
+[Чт 8 май 2025 MSK]                    physical id: 3
+[Чт 8 май 2025 MSK]                    logical name: input26
+[Чт 8 май 2025 MSK]                    logical name: /dev/input/event18
+[Чт 8 май 2025 MSK]         *-pci:1
+[Чт 8 май 2025 MSK]              description: PCI bridge
+[Чт 8 май 2025 MSK]              product: Family 17h-19h PCIe GPP Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 2.1
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:02.1
+[Чт 8 май 2025 MSK]              version: 00
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: pci pm pciexpress msi ht normal_decode bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: driver=pcieport
+[Чт 8 май 2025 MSK]              resources: irq:34 memory:fcb00000-fcbfffff ioport:7e20300000(size=1048576)
+[Чт 8 май 2025 MSK]            *-network
+[Чт 8 май 2025 MSK]                 description: Wireless interface
+[Чт 8 май 2025 MSK]                 product: MT7922 802.11ax PCI Express Wireless Network Adapter
+[Чт 8 май 2025 MSK]                 vendor: MEDIATEK Corp.
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:02:00.0
+[Чт 8 май 2025 MSK]                 logical name: wlo1
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 serial: d8:80:83:80:8c:65
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pciexpress msi pm bus_master cap_list ethernet physical wireless
+[Чт 8 май 2025 MSK]                 configuration: broadcast=yes driver=mt7921e driverversion=6.8.0-51-generic firmware=____000000-20240219103337 ip=192.168.1.106 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+[Чт 8 май 2025 MSK]                 resources: iomemory:7e0-7df irq:74 memory:7e20300000-7e203fffff memory:fcb00000-fcb07fff
+[Чт 8 май 2025 MSK]         *-pci:2
+[Чт 8 май 2025 MSK]              description: PCI bridge
+[Чт 8 май 2025 MSK]              product: Family 17h-19h PCIe GPP Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 2.3
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:02.3
+[Чт 8 май 2025 MSK]              version: 00
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: pci pm pciexpress msi ht normal_decode bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: driver=pcieport
+[Чт 8 май 2025 MSK]              resources: irq:35 ioport:e000(size=4096) memory:fca00000-fcafffff
+[Чт 8 май 2025 MSK]            *-network
+[Чт 8 май 2025 MSK]                 description: Ethernet interface
+[Чт 8 май 2025 MSK]                 product: RTL8125 2.5GbE Controller
+[Чт 8 май 2025 MSK]                 vendor: Realtek Semiconductor Co., Ltd.
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:03:00.0
+[Чт 8 май 2025 MSK]                 logical name: enp3s0
+[Чт 8 май 2025 MSK]                 version: 05
+[Чт 8 май 2025 MSK]                 serial: a0:36:bc:d2:a3:ec
+[Чт 8 май 2025 MSK]                 size: 100Mbit/s
+[Чт 8 май 2025 MSK]                 capacity: 1Gbit/s
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm msi pciexpress msix vpd bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+[Чт 8 май 2025 MSK]                 configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=6.8.0-51-generic duplex=full firmware=rtl8125b-2_0.0.2 07/13/20 ip=192.168.1.105 latency=0 link=yes multicast=yes port=twisted pair speed=100Mbit/s
+[Чт 8 май 2025 MSK]                 resources: irq:42 ioport:e000(size=256) memory:fca00000-fca0ffff memory:fca10000-fca13fff
+[Чт 8 май 2025 MSK]         *-pci:3
+[Чт 8 май 2025 MSK]              description: PCI bridge
+[Чт 8 май 2025 MSK]              product: Family 17h-19h PCIe GPP Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 2.4
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:02.4
+[Чт 8 май 2025 MSK]              version: 00
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: pci pm pciexpress msi ht normal_decode bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: driver=pcieport
+[Чт 8 май 2025 MSK]              resources: irq:36 memory:fc900000-fc9fffff
+[Чт 8 май 2025 MSK]            *-nvme
+[Чт 8 май 2025 MSK]                 description: NVMe device
+[Чт 8 май 2025 MSK]                 product: WD PC SN735 SDBPNHH-1T00-1002
+[Чт 8 май 2025 MSK]                 vendor: Sandisk Corp
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:04:00.0
+[Чт 8 май 2025 MSK]                 logical name: /dev/nvme0
+[Чт 8 май 2025 MSK]                 version: 70626000
+[Чт 8 май 2025 MSK]                 serial: 221077800358
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: nvme pciexpress msix msi pm nvm_express bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=nvme latency=0 nqn=nqn.2018-01.com.wdc:nguid:E8238FA6BF53-0001-001B448B452E6FC9 state=live
+[Чт 8 май 2025 MSK]                 resources: irq:42 memory:fc900000-fc903fff
+[Чт 8 май 2025 MSK]               *-namespace:0
+[Чт 8 май 2025 MSK]                    description: NVMe disk
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    logical name: hwmon3
+[Чт 8 май 2025 MSK]               *-namespace:1
+[Чт 8 май 2025 MSK]                    description: NVMe disk
+[Чт 8 май 2025 MSK]                    physical id: 2
+[Чт 8 май 2025 MSK]                    logical name: /dev/ng0n1
+[Чт 8 май 2025 MSK]               *-namespace:2
+[Чт 8 май 2025 MSK]                    description: NVMe disk
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    bus info: nvme@0:1
+[Чт 8 май 2025 MSK]                    logical name: /dev/nvme0n1
+[Чт 8 май 2025 MSK]                    size: 953GiB (1024GB)
+[Чт 8 май 2025 MSK]                    capabilities: gpt-1.00 partitioned partitioned:gpt
+[Чт 8 май 2025 MSK]                    configuration: guid=3db7b44e-ac3b-4198-85af-cf456dbc09ee logicalsectorsize=512 sectorsize=512 wwid=eui.e8238fa6bf530001001b448b452e6fc9
+[Чт 8 май 2025 MSK]                  *-volume:0 UNCLAIMED
+[Чт 8 май 2025 MSK]                       description: Windows FAT volume
+[Чт 8 май 2025 MSK]                       vendor: MSDOS5.0
+[Чт 8 май 2025 MSK]                       physical id: 1
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,1
+[Чт 8 май 2025 MSK]                       version: FAT32
+[Чт 8 май 2025 MSK]                       serial: 5edf-afcf
+[Чт 8 май 2025 MSK]                       size: 95MiB
+[Чт 8 май 2025 MSK]                       capacity: 99MiB
+[Чт 8 май 2025 MSK]                       capabilities: boot fat initialized
+[Чт 8 май 2025 MSK]                       configuration: FATs=2 filesystem=fat name=EFI system partition
+[Чт 8 май 2025 MSK]                  *-volume:1
+[Чт 8 май 2025 MSK]                       description: reserved partition
+[Чт 8 май 2025 MSK]                       vendor: Windows
+[Чт 8 май 2025 MSK]                       physical id: 2
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,2
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p2
+[Чт 8 май 2025 MSK]                       serial: db441f28-5de1-44a8-9270-ced698f93e65
+[Чт 8 май 2025 MSK]                       capacity: 15MiB
+[Чт 8 май 2025 MSK]                       capabilities: nofs
+[Чт 8 май 2025 MSK]                       configuration: name=Microsoft reserved partition
+[Чт 8 май 2025 MSK]                  *-volume:2
+[Чт 8 май 2025 MSK]                       description: Windows NTFS volume
+[Чт 8 май 2025 MSK]                       vendor: Windows
+[Чт 8 май 2025 MSK]                       physical id: 3
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,3
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p3
+[Чт 8 май 2025 MSK]                       version: 3.1
+[Чт 8 май 2025 MSK]                       serial: e6e8a5da-45bf-6c4a-9ed1-28a7c5c8eae4
+[Чт 8 май 2025 MSK]                       size: 771GiB
+[Чт 8 май 2025 MSK]                       capacity: 771GiB
+[Чт 8 май 2025 MSK]                       capabilities: ntfs initialized
+[Чт 8 май 2025 MSK]                       configuration: clustersize=4096 created=2023-05-12 01:13:55 filesystem=ntfs name=Basic data partition state=clean
+[Чт 8 май 2025 MSK]                  *-volume:3
+[Чт 8 май 2025 MSK]                       description: Windows NTFS volume
+[Чт 8 май 2025 MSK]                       vendor: Windows
+[Чт 8 май 2025 MSK]                       physical id: 4
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,4
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p4
+[Чт 8 май 2025 MSK]                       version: 3.1
+[Чт 8 май 2025 MSK]                       serial: 26a0-3ff0
+[Чт 8 май 2025 MSK]                       size: 949MiB
+[Чт 8 май 2025 MSK]                       capacity: 956MiB
+[Чт 8 май 2025 MSK]                       capabilities: boot precious nomount ntfs initialized
+[Чт 8 май 2025 MSK]                       configuration: clustersize=4096 created=2024-06-17 05:39:50 filesystem=ntfs state=clean
+[Чт 8 май 2025 MSK]                  *-volume:4
+[Чт 8 май 2025 MSK]                       description: EXT4 volume
+[Чт 8 май 2025 MSK]                       vendor: Linux
+[Чт 8 май 2025 MSK]                       physical id: 5
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,5
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p5
+[Чт 8 май 2025 MSK]                       version: 1.0
+[Чт 8 май 2025 MSK]                       serial: 97cfc64c-5b6e-4d37-8a13-e5052d6d4329
+[Чт 8 май 2025 MSK]                       size: 73GiB
+[Чт 8 май 2025 MSK]                       capacity: 73GiB
+[Чт 8 май 2025 MSK]                       capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+[Чт 8 май 2025 MSK]                       configuration: created=2024-06-08 22:20:17 filesystem=ext4 lastmountpoint=/media/zkarajaz/97cfc64c-5b6e-4d37-8a13-e5052d6d4329 modified=2025-02-22 03:31:26 mounted=2025-02-22 03:23:11 name=root state=clean
+[Чт 8 май 2025 MSK]                  *-volume:5
+[Чт 8 май 2025 MSK]                       description: Windows FAT volume
+[Чт 8 май 2025 MSK]                       vendor: mkfs.fat
+[Чт 8 май 2025 MSK]                       physical id: 6
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,6
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p6
+[Чт 8 май 2025 MSK]                       version: FAT32
+[Чт 8 май 2025 MSK]                       serial: db6c-9dc8
+[Чт 8 май 2025 MSK]                       size: 18GiB
+[Чт 8 май 2025 MSK]                       capacity: 18GiB
+[Чт 8 май 2025 MSK]                       capabilities: boot fat initialized
+[Чт 8 май 2025 MSK]                       configuration: FATs=2 filesystem=fat
+[Чт 8 май 2025 MSK]                  *-volume:6
+[Чт 8 май 2025 MSK]                       description: Linux swap volume
+[Чт 8 май 2025 MSK]                       vendor: Linux
+[Чт 8 май 2025 MSK]                       physical id: 7
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,7
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p7
+[Чт 8 май 2025 MSK]                       version: 1
+[Чт 8 май 2025 MSK]                       serial: 37360f8e-625b-4c16-aa9f-df4cd04c144e
+[Чт 8 май 2025 MSK]                       size: 976MiB
+[Чт 8 май 2025 MSK]                       capacity: 976MiB
+[Чт 8 май 2025 MSK]                       capabilities: nofs swap initialized
+[Чт 8 май 2025 MSK]                       configuration: filesystem=swap pagesize=4095
+[Чт 8 май 2025 MSK]                  *-volume:7
+[Чт 8 май 2025 MSK]                       description: Linux swap volume
+[Чт 8 май 2025 MSK]                       vendor: Linux
+[Чт 8 май 2025 MSK]                       physical id: 8
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,8
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p8
+[Чт 8 май 2025 MSK]                       version: 1
+[Чт 8 май 2025 MSK]                       serial: a9f61cb2-4527-4ae1-9a7d-68f1f9e54808
+[Чт 8 май 2025 MSK]                       size: 3699MiB
+[Чт 8 май 2025 MSK]                       capacity: 3699MiB
+[Чт 8 май 2025 MSK]                       capabilities: nofs swap initialized
+[Чт 8 май 2025 MSK]                       configuration: filesystem=swap pagesize=4095
+[Чт 8 май 2025 MSK]                  *-volume:8
+[Чт 8 май 2025 MSK]                       description: Windows NTFS volume
+[Чт 8 май 2025 MSK]                       vendor: Windows
+[Чт 8 май 2025 MSK]                       physical id: 9
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,9
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p9
+[Чт 8 май 2025 MSK]                       version: 3.1
+[Чт 8 май 2025 MSK]                       serial: 9e77-6e5b
+[Чт 8 май 2025 MSK]                       size: 512MiB
+[Чт 8 май 2025 MSK]                       capacity: 540MiB
+[Чт 8 май 2025 MSK]                       capabilities: boot precious ntfs initialized
+[Чт 8 май 2025 MSK]                       configuration: clustersize=4096 created=2023-05-12 01:18:08 filesystem=ntfs state=clean
+[Чт 8 май 2025 MSK]                  *-volume:9
+[Чт 8 май 2025 MSK]                       description: EXT4 volume
+[Чт 8 май 2025 MSK]                       vendor: Linux
+[Чт 8 май 2025 MSK]                       physical id: a
+[Чт 8 май 2025 MSK]                       bus info: nvme@0:1,10
+[Чт 8 май 2025 MSK]                       logical name: /dev/nvme0n1p10
+[Чт 8 май 2025 MSK]                       logical name: /
+[Чт 8 май 2025 MSK]                       version: 1.0
+[Чт 8 май 2025 MSK]                       serial: 2ca5d165-35e4-4e44-bd57-ef80aa8be4ea
+[Чт 8 май 2025 MSK]                       size: 84GiB
+[Чт 8 май 2025 MSK]                       capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+[Чт 8 май 2025 MSK]                       configuration: created=2025-02-22 02:38:42 filesystem=ext4 lastmountpoint=/ modified=2025-04-10 07:33:41 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro mounted=2025-04-10 07:33:31 state=mounted
+[Чт 8 май 2025 MSK]         *-pci:4
+[Чт 8 май 2025 MSK]              description: PCI bridge
+[Чт 8 май 2025 MSK]              product: Family 17h-19h Internal PCIe GPP Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 8.1
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:08.1
+[Чт 8 май 2025 MSK]              version: 10
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: pci pm pciexpress msi normal_decode bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: driver=pcieport
+[Чт 8 май 2025 MSK]              resources: irq:37 ioport:d000(size=4096) memory:fc200000-fc5fffff ioport:7e10000000(size=270532608)
+[Чт 8 май 2025 MSK]            *-display
+[Чт 8 май 2025 MSK]                 description: VGA compatible controller
+[Чт 8 май 2025 MSK]                 product: Rembrandt [Radeon 680M]
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD/ATI]
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:05:00.0
+[Чт 8 май 2025 MSK]                 logical name: /dev/fb0
+[Чт 8 май 2025 MSK]                 version: c8
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix vga_controller bus_master cap_list fb
+[Чт 8 май 2025 MSK]                 configuration: depth=32 driver=amdgpu latency=0 resolution=2560,1440
+[Чт 8 май 2025 MSK]                 resources: iomemory:7e0-7df iomemory:7e0-7df irq:43 memory:7e10000000-7e1fffffff memory:7e20000000-7e201fffff ioport:d000(size=256) memory:fc500000-fc57ffff
+[Чт 8 май 2025 MSK]            *-generic
+[Чт 8 май 2025 MSK]                 description: Encryption controller
+[Чт 8 май 2025 MSK]                 product: Family 19h PSP/CCP
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.2
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:05:00.2
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 32 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=ccp latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:69 memory:fc400000-fc4fffff memory:fc5c8000-fc5c9fff
+[Чт 8 май 2025 MSK]            *-usb:0
+[Чт 8 май 2025 MSK]                 description: USB controller
+[Чт 8 май 2025 MSK]                 product: Rembrandt USB4 XHCI controller #3
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.3
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:05:00.3
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix xhci bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=xhci_hcd latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:40 memory:fc300000-fc3fffff
+[Чт 8 май 2025 MSK]               *-usbhost:0
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    bus info: usb@1
+[Чт 8 май 2025 MSK]                    logical name: usb1
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-2.00
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=4 speed=480Mbit/s
+[Чт 8 май 2025 MSK]                  *-usb:0
+[Чт 8 май 2025 MSK]                       description: Keyboard
+[Чт 8 май 2025 MSK]                       product: Asus Keyboard
+[Чт 8 май 2025 MSK]                       vendor: ASUSTek Computer Inc.
+[Чт 8 май 2025 MSK]                       physical id: 3
+[Чт 8 май 2025 MSK]                       bus info: usb@1:3
+[Чт 8 май 2025 MSK]                       logical name: input16
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event7
+[Чт 8 май 2025 MSK]                       logical name: input16::capslock
+[Чт 8 май 2025 MSK]                       logical name: input16::compose
+[Чт 8 май 2025 MSK]                       logical name: input16::kana
+[Чт 8 май 2025 MSK]                       logical name: input16::numlock
+[Чт 8 май 2025 MSK]                       logical name: input16::scrolllock
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/mouse2
+[Чт 8 май 2025 MSK]                       version: 2.13
+[Чт 8 май 2025 MSK]                       capabilities: usb-2.00 usb
+[Чт 8 май 2025 MSK]                       configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
+[Чт 8 май 2025 MSK]                  *-usb:1
+[Чт 8 май 2025 MSK]                       description: Bluetooth wireless interface
+[Чт 8 май 2025 MSK]                       product: Wireless_Device
+[Чт 8 май 2025 MSK]                       vendor: MediaTek Inc.
+[Чт 8 май 2025 MSK]                       physical id: 4
+[Чт 8 май 2025 MSK]                       bus info: usb@1:4
+[Чт 8 май 2025 MSK]                       version: 1.00
+[Чт 8 май 2025 MSK]                       serial: 000000000
+[Чт 8 май 2025 MSK]                       capabilities: usb-2.10 bluetooth
+[Чт 8 май 2025 MSK]                       configuration: driver=btusb maxpower=100mA speed=480Mbit/s
+[Чт 8 май 2025 MSK]               *-usbhost:1
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    bus info: usb@2
+[Чт 8 май 2025 MSK]                    logical name: usb2
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-3.10
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=2 speed=10000Mbit/s
+[Чт 8 май 2025 MSK]            *-usb:1
+[Чт 8 май 2025 MSK]                 description: USB controller
+[Чт 8 май 2025 MSK]                 product: Rembrandt USB4 XHCI controller #4
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.4
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:05:00.4
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix xhci bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=xhci_hcd latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:43 memory:fc200000-fc2fffff
+[Чт 8 май 2025 MSK]               *-usbhost:0
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    bus info: usb@3
+[Чт 8 май 2025 MSK]                    logical name: usb3
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-2.00
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=3 speed=480Mbit/s
+[Чт 8 май 2025 MSK]                  *-usb:0
+[Чт 8 май 2025 MSK]                       description: Audio device
+[Чт 8 май 2025 MSK]                       product: USB PnP Audio Device
+[Чт 8 май 2025 MSK]                       vendor: JMTek, LLC.
+[Чт 8 май 2025 MSK]                       physical id: 1
+[Чт 8 май 2025 MSK]                       bus info: usb@3:1
+[Чт 8 май 2025 MSK]                       logical name: card1
+[Чт 8 май 2025 MSK]                       logical name: /dev/snd/controlC1
+[Чт 8 май 2025 MSK]                       logical name: /dev/snd/pcmC1D0c
+[Чт 8 май 2025 MSK]                       logical name: input15
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event13
+[Чт 8 май 2025 MSK]                       version: 1.00
+[Чт 8 май 2025 MSK]                       capabilities: usb-1.10 audio-control usb
+[Чт 8 май 2025 MSK]                       configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
+[Чт 8 май 2025 MSK]                  *-usb:1
+[Чт 8 май 2025 MSK]                       description: Keyboard
+[Чт 8 май 2025 MSK]                       product: Gaming Keyboard Mouse
+[Чт 8 май 2025 MSK]                       vendor: Winbond Electronics Corp.
+[Чт 8 май 2025 MSK]                       physical id: 2
+[Чт 8 май 2025 MSK]                       bus info: usb@3:2
+[Чт 8 май 2025 MSK]                       logical name: input17
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event8
+[Чт 8 май 2025 MSK]                       logical name: input17::capslock
+[Чт 8 май 2025 MSK]                       logical name: input17::compose
+[Чт 8 май 2025 MSK]                       logical name: input17::kana
+[Чт 8 май 2025 MSK]                       logical name: input17::numlock
+[Чт 8 май 2025 MSK]                       logical name: input17::scrolllock
+[Чт 8 май 2025 MSK]                       logical name: input18
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event9
+[Чт 8 май 2025 MSK]                       logical name: input19
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event10
+[Чт 8 май 2025 MSK]                       logical name: input20
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event11
+[Чт 8 май 2025 MSK]                       logical name: input21
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/event12
+[Чт 8 май 2025 MSK]                       logical name: /dev/input/mouse3
+[Чт 8 май 2025 MSK]                       version: 0.00
+[Чт 8 май 2025 MSK]                       capabilities: usb-1.10 usb
+[Чт 8 май 2025 MSK]                       configuration: driver=usbhid maxpower=400mA speed=12Mbit/s
+[Чт 8 май 2025 MSK]               *-usbhost:1
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    bus info: usb@4
+[Чт 8 май 2025 MSK]                    logical name: usb4
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-3.10
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=2 speed=10000Mbit/s
+[Чт 8 май 2025 MSK]            *-multimedia:0
+[Чт 8 май 2025 MSK]                 description: Multimedia controller
+[Чт 8 май 2025 MSK]                 product: ACP/ACP3X/ACP6x Audio Coprocessor
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.5
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:05:00.5
+[Чт 8 май 2025 MSK]                 version: 60
+[Чт 8 май 2025 MSK]                 width: 32 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=snd_pci_acp6x latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:72 memory:fc580000-fc5bffff
+[Чт 8 май 2025 MSK]            *-multimedia:1
+[Чт 8 май 2025 MSK]                 description: Audio device
+[Чт 8 май 2025 MSK]                 product: Family 17h/19h HD Audio Controller
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.6
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:05:00.6
+[Чт 8 май 2025 MSK]                 logical name: card2
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/controlC2
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/hwC2D0
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/pcmC2D0c
+[Чт 8 май 2025 MSK]                 logical name: /dev/snd/pcmC2D0p
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 32 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=snd_hda_intel latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:75 memory:fc5c0000-fc5c7fff
+[Чт 8 май 2025 MSK]               *-input:0
+[Чт 8 май 2025 MSK]                    product: HD-Audio Generic Headset Mic
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    logical name: input27
+[Чт 8 май 2025 MSK]                    logical name: /dev/input/event19
+[Чт 8 май 2025 MSK]               *-input:1
+[Чт 8 май 2025 MSK]                    product: HD-Audio Generic Headphone
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    logical name: input28
+[Чт 8 май 2025 MSK]                    logical name: /dev/input/event20
+[Чт 8 май 2025 MSK]         *-pci:5
+[Чт 8 май 2025 MSK]              description: PCI bridge
+[Чт 8 май 2025 MSK]              product: Family 17h-19h Internal PCIe GPP Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 8.3
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:08.3
+[Чт 8 май 2025 MSK]              version: 10
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 33MHz
+[Чт 8 май 2025 MSK]              capabilities: pci pm pciexpress msi normal_decode bus_master cap_list
+[Чт 8 май 2025 MSK]              configuration: driver=pcieport
+[Чт 8 май 2025 MSK]              resources: irq:38 memory:fc600000-fc8fffff
+[Чт 8 май 2025 MSK]            *-usb:0
+[Чт 8 май 2025 MSK]                 description: USB controller
+[Чт 8 май 2025 MSK]                 product: Rembrandt USB4 XHCI controller #8
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:06:00.0
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix xhci bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=xhci_hcd latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:46 memory:fc800000-fc8fffff
+[Чт 8 май 2025 MSK]               *-usbhost:0
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    bus info: usb@5
+[Чт 8 май 2025 MSK]                    logical name: usb5
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-2.00
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=1 speed=480Mbit/s
+[Чт 8 май 2025 MSK]               *-usbhost:1
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    bus info: usb@6
+[Чт 8 май 2025 MSK]                    logical name: usb6
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-3.00
+[Чт 8 май 2025 MSK]                    configuration: speed=5000Mbit/s
+[Чт 8 май 2025 MSK]            *-usb:1
+[Чт 8 май 2025 MSK]                 description: USB controller
+[Чт 8 май 2025 MSK]                 product: Rembrandt USB4 XHCI controller #5
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.3
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:06:00.3
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix xhci bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=xhci_hcd latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:49 memory:fc700000-fc7fffff
+[Чт 8 май 2025 MSK]               *-usbhost:0
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    bus info: usb@7
+[Чт 8 май 2025 MSK]                    logical name: usb7
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-2.00
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=1 speed=480Mbit/s
+[Чт 8 май 2025 MSK]               *-usbhost:1
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    bus info: usb@8
+[Чт 8 май 2025 MSK]                    logical name: usb8
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-3.10
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=1 speed=10000Mbit/s
+[Чт 8 май 2025 MSK]            *-usb:2
+[Чт 8 май 2025 MSK]                 description: USB controller
+[Чт 8 май 2025 MSK]                 product: Rembrandt USB4 XHCI controller #6
+[Чт 8 май 2025 MSK]                 vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]                 physical id: 0.4
+[Чт 8 май 2025 MSK]                 bus info: pci@0000:06:00.4
+[Чт 8 май 2025 MSK]                 version: 00
+[Чт 8 май 2025 MSK]                 width: 64 bits
+[Чт 8 май 2025 MSK]                 clock: 33MHz
+[Чт 8 май 2025 MSK]                 capabilities: pm pciexpress msi msix xhci bus_master cap_list
+[Чт 8 май 2025 MSK]                 configuration: driver=xhci_hcd latency=0
+[Чт 8 май 2025 MSK]                 resources: irq:51 memory:fc600000-fc6fffff
+[Чт 8 май 2025 MSK]               *-usbhost:0
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 0
+[Чт 8 май 2025 MSK]                    bus info: usb@9
+[Чт 8 май 2025 MSK]                    logical name: usb9
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-2.00
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=1 speed=480Mbit/s
+[Чт 8 май 2025 MSK]               *-usbhost:1
+[Чт 8 май 2025 MSK]                    product: xHCI Host Controller
+[Чт 8 май 2025 MSK]                    vendor: Linux 6.8.0-51-generic xhci-hcd
+[Чт 8 май 2025 MSK]                    physical id: 1
+[Чт 8 май 2025 MSK]                    bus info: usb@10
+[Чт 8 май 2025 MSK]                    logical name: usb10
+[Чт 8 май 2025 MSK]                    version: 6.08
+[Чт 8 май 2025 MSK]                    capabilities: usb-3.10
+[Чт 8 май 2025 MSK]                    configuration: driver=hub slots=1 speed=10000Mbit/s
+[Чт 8 май 2025 MSK]         *-serial
+[Чт 8 май 2025 MSK]              description: SMBus
+[Чт 8 май 2025 MSK]              product: FCH SMBus Controller
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 14
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:14.0
+[Чт 8 май 2025 MSK]              version: 71
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 66MHz
+[Чт 8 май 2025 MSK]              configuration: driver=piix4_smbus latency=0
+[Чт 8 май 2025 MSK]              resources: irq:0
+[Чт 8 май 2025 MSK]         *-isa
+[Чт 8 май 2025 MSK]              description: ISA bridge
+[Чт 8 май 2025 MSK]              product: FCH LPC Bridge
+[Чт 8 май 2025 MSK]              vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]              physical id: 14.3
+[Чт 8 май 2025 MSK]              bus info: pci@0000:00:14.3
+[Чт 8 май 2025 MSK]              version: 51
+[Чт 8 май 2025 MSK]              width: 32 bits
+[Чт 8 май 2025 MSK]              clock: 66MHz
+[Чт 8 май 2025 MSK]              capabilities: isa bus_master
+[Чт 8 май 2025 MSK]              configuration: latency=0
+[Чт 8 май 2025 MSK]            *-pnp00:00
+[Чт 8 май 2025 MSK]                 product: PnP device PNP0c01
+[Чт 8 май 2025 MSK]                 physical id: 0
+[Чт 8 май 2025 MSK]                 capabilities: pnp
+[Чт 8 май 2025 MSK]                 configuration: driver=system
+[Чт 8 май 2025 MSK]            *-pnp00:01
+[Чт 8 май 2025 MSK]                 product: PnP device PNP0b00
+[Чт 8 май 2025 MSK]                 physical id: 1
+[Чт 8 май 2025 MSK]                 capabilities: pnp
+[Чт 8 май 2025 MSK]                 configuration: driver=rtc_cmos
+[Чт 8 май 2025 MSK]            *-pnp00:02
+[Чт 8 май 2025 MSK]                 product: PnP device ATK3001
+[Чт 8 май 2025 MSK]                 vendor: Allied Telesyn Int'l
+[Чт 8 май 2025 MSK]                 physical id: 2
+[Чт 8 май 2025 MSK]                 capabilities: pnp
+[Чт 8 май 2025 MSK]                 configuration: driver=i8042 kbd
+[Чт 8 май 2025 MSK]            *-pnp00:03
+[Чт 8 май 2025 MSK]                 product: PnP device PNP0c02
+[Чт 8 май 2025 MSK]                 physical id: 3
+[Чт 8 май 2025 MSK]                 capabilities: pnp
+[Чт 8 май 2025 MSK]                 configuration: driver=system
+[Чт 8 май 2025 MSK]      *-pci:1
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Family 17h-19h PCIe Dummy Host Bridge
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 101
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:01.0
+[Чт 8 май 2025 MSK]           version: 01
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:2
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Family 17h-19h PCIe Dummy Host Bridge
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 102
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:02.0
+[Чт 8 май 2025 MSK]           version: 01
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:3
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Family 17h-19h PCIe Dummy Host Bridge
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 103
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:03.0
+[Чт 8 май 2025 MSK]           version: 01
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:4
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Family 17h-19h PCIe Dummy Host Bridge
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 104
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:04.0
+[Чт 8 май 2025 MSK]           version: 01
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:5
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Family 17h-19h PCIe Dummy Host Bridge
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 105
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:08.0
+[Чт 8 май 2025 MSK]           version: 01
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:6
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 0
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 106
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.0
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:7
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 1
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 107
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.1
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:8
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 2
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 108
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.2
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:9
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 3
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 109
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.3
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]           configuration: driver=k10temp
+[Чт 8 май 2025 MSK]           resources: irq:0
+[Чт 8 май 2025 MSK]      *-pci:10
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 4
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 10a
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.4
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:11
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 5
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 10b
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.5
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:12
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 6
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 10c
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.6
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]      *-pci:13
+[Чт 8 май 2025 MSK]           description: Host bridge
+[Чт 8 май 2025 MSK]           product: Rembrandt Data Fabric: Device 18h; Function 7
+[Чт 8 май 2025 MSK]           vendor: Advanced Micro Devices, Inc. [AMD]
+[Чт 8 май 2025 MSK]           physical id: 10d
+[Чт 8 май 2025 MSK]           bus info: pci@0000:00:18.7
+[Чт 8 май 2025 MSK]           version: 00
+[Чт 8 май 2025 MSK]           width: 32 bits
+[Чт 8 май 2025 MSK]           clock: 33MHz
+[Чт 8 май 2025 MSK]   *-input:0
+[Чт 8 май 2025 MSK]        product: Lid Switch
+[Чт 8 май 2025 MSK]        physical id: 1
+[Чт 8 май 2025 MSK]        logical name: input0
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event0
+[Чт 8 май 2025 MSK]        capabilities: platform
+[Чт 8 май 2025 MSK]   *-input:1
+[Чт 8 май 2025 MSK]        product: Power Button
+[Чт 8 май 2025 MSK]        physical id: 2
+[Чт 8 май 2025 MSK]        logical name: input1
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event1
+[Чт 8 май 2025 MSK]        capabilities: platform
+[Чт 8 май 2025 MSK]   *-input:2
+[Чт 8 май 2025 MSK]        product: Sleep Button
+[Чт 8 май 2025 MSK]        physical id: 3
+[Чт 8 май 2025 MSK]        logical name: input2
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event2
+[Чт 8 май 2025 MSK]        capabilities: platform
+[Чт 8 май 2025 MSK]   *-input:3
+[Чт 8 май 2025 MSK]        product: Asus WMI hotkeys
+[Чт 8 май 2025 MSK]        physical id: 4
+[Чт 8 май 2025 MSK]        logical name: input22
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event14
+[Чт 8 май 2025 MSK]        capabilities: platform
+[Чт 8 май 2025 MSK]   *-input:4
+[Чт 8 май 2025 MSK]        product: AT Translated Set 2 keyboard
+[Чт 8 май 2025 MSK]        physical id: 5
+[Чт 8 май 2025 MSK]        logical name: input3
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event3
+[Чт 8 май 2025 MSK]        logical name: input3::capslock
+[Чт 8 май 2025 MSK]        logical name: input3::numlock
+[Чт 8 май 2025 MSK]        logical name: input3::scrolllock
+[Чт 8 май 2025 MSK]        capabilities: i8042
+[Чт 8 май 2025 MSK]   *-input:5
+[Чт 8 май 2025 MSK]        product: Logitech MX Ergo Multi-Device Trackball
+[Чт 8 май 2025 MSK]        physical id: 6
+[Чт 8 май 2025 MSK]        logical name: input31
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event21
+[Чт 8 май 2025 MSK]        logical name: /dev/input/mouse4
+[Чт 8 май 2025 MSK]        capabilities: bluetooth
+[Чт 8 май 2025 MSK]   *-input:6
+[Чт 8 май 2025 MSK]        product: Video Bus
+[Чт 8 май 2025 MSK]        physical id: 7
+[Чт 8 май 2025 MSK]        logical name: input4
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event4
+[Чт 8 май 2025 MSK]        capabilities: platform
+[Чт 8 май 2025 MSK]   *-input:7
+[Чт 8 май 2025 MSK]        product: ASUE120A:00 04F3:319B Mouse
+[Чт 8 май 2025 MSK]        physical id: 8
+[Чт 8 май 2025 MSK]        logical name: input7
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event5
+[Чт 8 май 2025 MSK]        logical name: /dev/input/mouse0
+[Чт 8 май 2025 MSK]        capabilities: i2c
+[Чт 8 май 2025 MSK]   *-input:8
+[Чт 8 май 2025 MSK]        product: ASUE120A:00 04F3:319B Touchpad
+[Чт 8 май 2025 MSK]        physical id: 9
+[Чт 8 май 2025 MSK]        logical name: input8
+[Чт 8 май 2025 MSK]        logical name: /dev/input/event6
+[Чт 8 май 2025 MSK]        logical name: /dev/input/mouse1
+[Чт 8 май 2025 MSK]        capabilities: i2c
+
+#3. Справочное руководство
+#Вывод справочной информации по командам date,who,tty
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ man date
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ man who
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ man tty
+#Разделы: NAME  — название команды и краткое описание.
+#SYNOPSIS  — синтаксис команды (аргументы, ключи).
+#DESCRIPTION  — детальное описание функционала.   
+#OPTIONS  — список ключей и их назначение.   
+#EXAMPLES  — примеры использования (не всегда присутствует).   
+#SEE ALSO  — ссылки на связанные команды или разделы.   
+#AUTHOR  — автор команды. 
+
+#4. Работа с файлами
+#создаем файлы  junk и temp
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ echo 'Тестовый текст' > junk
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ echo 'Еще текст' > temp
+#вывод содержимого текущей директории
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls
+[Чт 8 май 2025 MSK] junk
+[Чт 8 май 2025 MSK] lb1.log
+[Чт 8 май 2025 MSK] log.sh
+[Чт 8 май 2025 MSK] temp
+#вывод подробной информации о файлах и каталогах  в текущей директории в виде списка
+#Столбцы в выводе ls -l:    
+#-Тип файла и права доступа (rw-r--r--).  
+#-Количество ссылок на файл.  
+#-Владелец файла (buc).  
+#-Группа (people).  
+#-Размер файла в байтах.  
+#-Дата и время последнего изменения.   
+#-Имя файла.  
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 76
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    28 Чт 8 май 2025 MSKnk
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 63537 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKmp
+#вывод имя файла junk,если он существует
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls junk
+[Чт 8 май 2025 MSK] junk
+#вывод имена обоих файлов, если они существую
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls junk temp
+[Чт 8 май 2025 MSK] junk
+[Чт 8 май 2025 MSK] temp
+#Выводит содержимое  файла junk
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat junk
+[Чт 8 май 2025 MSK] Тестовый текст
+#Выводит содержимое  файла temp
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat temp
+[Чт 8 май 2025 MSK] Еще текст
+#Выводит содержимое обоих файлов последовательно
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat junk temp
+[Чт 8 май 2025 MSK] Тестовый текст
+[Чт 8 май 2025 MSK] Еще текст
+#Переименовывает файл junk -> aaa
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ mv junk aaa
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 76
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    28 Чт 8 май 2025 MSKa
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 64891 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKmp
+#копирует содержимое aaa в новый файл bbb
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cp aaa bbb
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 80
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    28 Чт 8 май 2025 MSKa
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    28 Чт 8 май 2025 MSKb
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 65452 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKmp
+#удаляет файлы junk и temp (файла junk не существует)
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ rm temp junk
+[Чт 8 май 2025 MSK] rm: cannot remove 'junk': No such file or directory
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 80
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    28 Чт 8 май 2025 MSKa
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    28 Чт 8 май 2025 MSKb
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 66138 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ rm aaa bbb
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 72
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 66698 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+
+#5. Работа с каталогами.
+#выводит текущую рабочую директорию
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ pwd
+[Чт 8 май 2025 MSK] /home/zkarajaz/Projects/Shubin_Pavel_lb1
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ echo '// Пример кода' > program.c
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 76
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 67354 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    25 Чт 8 май 2025 MSKog.c
+#вывод соджержимого корневой директории
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls /
+[Чт 8 май 2025 MSK] bin
+[Чт 8 май 2025 MSK] bin.usr-is-merged
+[Чт 8 май 2025 MSK] boot
+[Чт 8 май 2025 MSK] cdrom
+[Чт 8 май 2025 MSK] dev
+[Чт 8 май 2025 MSK] etc
+[Чт 8 май 2025 MSK] home
+[Чт 8 май 2025 MSK] lib
+[Чт 8 май 2025 MSK] lib64
+[Чт 8 май 2025 MSK] lib.usr-is-merged
+[Чт 8 май 2025 MSK] lost+found
+[Чт 8 май 2025 MSK] media
+[Чт 8 май 2025 MSK] mnt
+[Чт 8 май 2025 MSK] opt
+[Чт 8 май 2025 MSK] proc
+[Чт 8 май 2025 MSK] root
+[Чт 8 май 2025 MSK] run
+[Чт 8 май 2025 MSK] sbin
+[Чт 8 май 2025 MSK] sbin.usr-is-merged
+[Чт 8 май 2025 MSK] srv
+[Чт 8 май 2025 MSK] sys
+[Чт 8 май 2025 MSK] tmp
+[Чт 8 май 2025 MSK] usr
+[Чт 8 май 2025 MSK] var
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l /
+[Чт 8 май 2025 MSK] total 100
+[Чт 8 май 2025 MSK] lrwxrwxrwx   1 root root     7 Feb 22 02:39 bin -> usr/bin
+[Чт 8 май 2025 MSK] drwxr-xr-x   2 root root  4096 Feb 26  2024 bin.usr-is-merged
+[Чт 8 май 2025 MSK] drwxr-xr-x   4 root root  4096 Feb 22 03:02 boot
+[Чт 8 май 2025 MSK] drwxr-xr-x   2 root root  4096 Feb 22 02:42 cdrom
+[Чт 8 май 2025 MSK] drwxr-xr-x  19 root root  5060 Чт 8 май 2025 MSKv
+[Чт 8 май 2025 MSK] drwxr-xr-x 155 root root 12288 Feb 22 12:53 etc
+[Чт 8 май 2025 MSK] drwxr-xr-x   3 root root  4096 Feb 22 02:43 home
+[Чт 8 май 2025 MSK] lrwxrwxrwx   1 root root     7 Feb 22 02:39 lib -> usr/lib
+[Чт 8 май 2025 MSK] lrwxrwxrwx   1 root root     9 Feb 22 02:39 lib64 -> usr/lib64
+[Чт 8 май 2025 MSK] drwxr-xr-x   2 root root  4096 Чт 8 май 2025 MSKb.usr-is-merged
+[Чт 8 май 2025 MSK] drwx------   2 root root 16384 Feb 22 02:38 lost+found
+[Чт 8 май 2025 MSK] drwxr-xr-x   4 root root  4096 Feb 22 03:23 media
+[Чт 8 май 2025 MSK] drwxr-xr-x   2 root root  4096 Jan 10 19:16 mnt
+[Чт 8 май 2025 MSK] drwxr-xr-x   4 root root  4096 Feb 22 12:30 opt
+[Чт 8 май 2025 MSK] dr-xr-xr-x 450 root root     0 Чт 8 май 2025 MSKoc
+[Чт 8 май 2025 MSK] drwx------   8 root root  4096 Feb 22 12:51 root
+[Чт 8 май 2025 MSK] drwxr-xr-x  38 root root  1120 Чт 8 май 2025 MSKn
+[Чт 8 май 2025 MSK] lrwxrwxrwx   1 root root     8 Feb 22 02:39 sbin -> usr/sbin
+[Чт 8 май 2025 MSK] drwxr-xr-x   2 root root  4096 Mar 31  2024 sbin.usr-is-merged
+[Чт 8 май 2025 MSK] drwxr-xr-x   2 root root  4096 Jan 10 19:16 srv
+[Чт 8 май 2025 MSK] dr-xr-xr-x  13 root root     0 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] drwxrwxrwt  19 root root 20480 Чт 8 май 2025 MSKp
+[Чт 8 май 2025 MSK] drwxr-xr-x  12 root root  4096 Jan 10 19:16 usr
+[Чт 8 май 2025 MSK] drwxr-xr-x  11 root root  4096 Feb 21 23:59 var
+#Куда будете попадать, если продолжать выполнять cd ..? :
+#Корневой каталог /. Дальнейшие переходы cd .. будут оставлять пользователя в /, так как это вершина. 
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cd ..
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ pwd
+[Чт 8 май 2025 MSK] /home/zkarajaz/Projects/Shubin_Pavel_lb1
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 80
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 70528 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    25 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cd ../..
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ pwd
+[Чт 8 май 2025 MSK] /home/zkarajaz/Projects/Shubin_Pavel_lb1
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -ld / /bin ~
+[Чт 8 май 2025 MSK] drwxr-xr-x 22 root     root     4096 Feb 22 02:42 /
+[Чт 8 май 2025 MSK] lrwxrwxrwx  1 root     root        7 Feb 22 02:39 /bin -> usr/bin
+[Чт 8 май 2025 MSK] drwxr-x--- 32 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKome/zkarajaz
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cd
+#создаёт директорию test_dir
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ mkdir test_dir
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 84
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 71793 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    25 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] drwxrwxr-x 2 zkarajaz zkarajaz  4096 Чт 8 май 2025 MSKst_dir
+#переходим в созданную директорию и копируем туда файл из предыдущей директории
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cd test_dir && cp ../prog.c . && ls -l
+[Чт 8 май 2025 MSK] total 4
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 25 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cd ..
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 84
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 72594 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    25 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] drwxrwxr-x 2 zkarajaz zkarajaz  4096 Чт 8 май 2025 MSKst_dir
+#удаляем файл из директории test_dir, так как нельзя удалять непустую директорию
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ rm test_dir/prog.c
+#удаляем директорию test_dir
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ rmdir test_dir
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 80
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 73305 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    25 Чт 8 май 2025 MSKog.c
+#6. Процессы ОС Linux
+#выводит информацию о текущих процессах  в системе
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ps
+[Чт 8 май 2025 MSK]     PID TTY          TIME CMD
+[Чт 8 май 2025 MSK]    3504 pts/0    00:00:00 bash
+[Чт 8 май 2025 MSK]    7120 pts/0    00:00:00 log.sh
+[Чт 8 май 2025 MSK]    7125 pts/0    00:00:00 log.sh
+[Чт 8 май 2025 MSK]    7127 pts/0    00:00:00 ps
+
+# III. Изучение цикла подготовки и исполнения программ в ОС Linux.
+#Как передаются аргументы в программу на C? 
+#Аргументы передаются через параметры main:   
+#-argc — количество аргументов.  
+#-argv — массив строк с аргументами.
+#создаём файл program.c и выводим его содержимое
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 80
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 73576 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat
+[Чт 8 май 2025 MSK] #include <stdio.h>
+[Чт 8 май 2025 MSK] int main() {
+[Чт 8 май 2025 MSK]     printf("Hello, world!\n");
+[Чт 8 май 2025 MSK]     return 0;
+[Чт 8 май 2025 MSK] }
+#компилируем файл и получаем выходной файл hello
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ gcc program.c -o hello
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 100
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 74383 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+#запускаем программу
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./hello
+[Чт 8 май 2025 MSK] Hello, world!
+#записываем результат программы в res
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./hello > res
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 104
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 75144 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat res
+[Чт 8 май 2025 MSK] Hello, world!
+#создаем файл fopen.c и выводим его содержимое
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 108
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 75739 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz   370 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat
+
+
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ gcc fopen.c -o my_open
+#Создаем файл, чтобы протестировать программу
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ touch testfile
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 124
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 77474 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 16048 Чт 8 май 2025 MSK_open
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz   370 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./my_open testfile
+[Чт 8 май 2025 MSK] ./my_open: файл testfile открыт
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./my_open non_existent
+[Чт 8 май 2025 MSK] ./my_open: ошибка открытия non_existent
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./my_open
+[Чт 8 май 2025 MSK] Файл не указан
+
+#Конвейер
+#Создаем file_name и изменяем fopen.c, чтобы организовать конвейер
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ gcc fopen.c -o my_open
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ gcc file.c -o file_name
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 148
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15968 Чт 8 май 2025 MSKle_name
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   173 Чт 8 май 2025 MSKle_name.c
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 79082 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 16104 Чт 8 май 2025 MSK_open
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   299 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat file.c
+[Чт 8 май 2025 MSK] #include <stdio.h>
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK] int main(int argc, char *argv[]) {
+[Чт 8 май 2025 MSK]     if (argc > 1) {
+[Чт 8 май 2025 MSK]         printf("%s", argv[1]);
+[Чт 8 май 2025 MSK]     } else {
+[Чт 8 май 2025 MSK]         printf("testfile.txt"); 
+[Чт 8 май 2025 MSK]     }
+[Чт 8 май 2025 MSK]     return 0;
+[Чт 8 май 2025 MSK] }
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat fopen.c
+[Чт 8 май 2025 MSK] #include <stdio.h>
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK] int main() {
+[Чт 8 май 2025 MSK]     char filename[256];
+[Чт 8 май 2025 MSK]     scanf("%s", filename); 
+[Чт 8 май 2025 MSK]     if (fopen(filename, "r")) {
+[Чт 8 май 2025 MSK]         printf("%s: файл %s открыт\n", filename, filename);
+[Чт 8 май 2025 MSK]     } else {
+[Чт 8 май 2025 MSK]         printf("%s: ошибка открытия %s\n", filename, filename);
+[Чт 8 май 2025 MSK]     }
+[Чт 8 май 2025 MSK]     return 0;
+[Чт 8 май 2025 MSK] }
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./file_name | ./my_open
+[Чт 8 май 2025 MSK] testfile.txt: ошибка открытия testfile.txt
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ touch testfile.txt
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l
+[Чт 8 май 2025 MSK] total 148
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15968 Чт 8 май 2025 MSKle_name
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   173 Чт 8 май 2025 MSKle_name.c
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 80317 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 16104 Чт 8 май 2025 MSK_open
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   299 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile.txt
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ./file_name && ./my_open
+[Чт 8 май 2025 MSK] testfile.txttestfile.txt: файл testfile.txt открыт
+
+# IV. Изучение команд и утилит обработки текстов.
+
+#1. G r e p - поиск по шаблону, заданному регулярным выражением
+
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l /tmp | grep '^d'
+[Чт 8 май 2025 MSK] drwxr-xr-x 2 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKperfdata_zkarajaz
+[Чт 8 май 2025 MSK] drwxrwxrwx 2 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKntUpdate
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-bluetooth.service-QENpnq
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-colord.service-wUm4zo
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-fwupd.service-rrPQSs
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-ModemManager.service-jevSE6
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-polkit.service-jHQ952
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-power-profiles-daemon.service-7n47TX
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-switcheroo-control.service-EGHmsp
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-logind.service-1uXgwC
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-resolved.service-kktY0V
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-timesyncd.service-U5S6xg
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-upower.service-mkinCj
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l /tmp | grep '^...x'
+[Чт 8 май 2025 MSK] drwxr-xr-x 2 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKperfdata_zkarajaz
+[Чт 8 май 2025 MSK] drwxrwxrwx 2 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKntUpdate
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-bluetooth.service-QENpnq
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-colord.service-wUm4zo
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-fwupd.service-rrPQSs
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-ModemManager.service-jevSE6
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-polkit.service-jHQ952
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-power-profiles-daemon.service-7n47TX
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-switcheroo-control.service-EGHmsp
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-logind.service-1uXgwC
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-resolved.service-kktY0V
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-timesyncd.service-U5S6xg
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-upower.service-mkinCj
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l /tmp | grep 'root'
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-bluetooth.service-QENpnq
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-colord.service-wUm4zo
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-fwupd.service-rrPQSs
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-ModemManager.service-jevSE6
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-polkit.service-jHQ952
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-power-profiles-daemon.service-7n47TX
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-switcheroo-control.service-EGHmsp
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-logind.service-1uXgwC
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-resolved.service-kktY0V
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-systemd-timesyncd.service-U5S6xg
+[Чт 8 май 2025 MSK] drwx------ 3 root     root     4096 Чт 8 май 2025 MSKstemd-private-81675d8cc2454fff8d9b322a4773713c-upower.service-mkinCj
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l /tmp | grep -v 'root'
+[Чт 8 май 2025 MSK] total 52
+[Чт 8 май 2025 MSK] -rw------- 1 zkarajaz zkarajaz    0 Чт 8 май 2025 MSKnfig-err-X9JUPy
+[Чт 8 май 2025 MSK] drwxr-xr-x 2 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKperfdata_zkarajaz
+[Чт 8 май 2025 MSK] drwxrwxrwx 2 zkarajaz zkarajaz 4096 Чт 8 май 2025 MSKntUpdate
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    0 Чт 8 май 2025 MSKzillaUpdateLock-4F96D1932A9F858E
+[Чт 8 май 2025 MSK] -rw-r----- 1 zkarajaz zkarajaz    0 Чт 8 май 2025 MSKpc_sharedmemory_acffedadafffdced9b4eb84f921f845e4aa58276b3826df014075173
+
+#2. C u t  - выборка отдельных полей из строк файла
+#Извлекаем номера процессов из вывода ps
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ps -o pid --no-headers | cut -f1
+[Чт 8 май 2025 MSK]    3504
+[Чт 8 май 2025 MSK]    8702
+[Чт 8 май 2025 MSK]    8707
+[Чт 8 май 2025 MSK]    8709
+[Чт 8 май 2025 MSK]    8710
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ who | cut -d' ' -f1
+[Чт 8 май 2025 MSK] zkarajaz
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ logname
+[Чт 8 май 2025 MSK] zkarajaz
+
+#3. T r  -  преобразователь символов
+
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l | tr 'a-z' 'A-Z'
+[Чт 8 май 2025 MSK] TOTAL 156
+[Чт 8 май 2025 MSK] -RWXRWXR-X 1 zkarajaz zkarajaz 15968 Чт 8 май 2025 MSKLE_NAME
+[Чт 8 май 2025 MSK] -RW-R--R-- 1 zkarajaz zkarajaz   173 Чт 8 май 2025 MSKLE_NAME.C
+[Чт 8 май 2025 MSK] -RWXRWXR-X 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKLLO
+[Чт 8 май 2025 MSK] -RW-RW-R-- 1 zkarajaz zkarajaz 87996 Чт 8 май 2025 MSK1.LOG
+[Чт 8 май 2025 MSK] -RWXR-XR-X 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKG.SH
+[Чт 8 май 2025 MSK] -RWXRWXR-X 1 zkarajaz zkarajaz 16104 Чт 8 май 2025 MSK_OPEN
+[Чт 8 май 2025 MSK] -RW-R--R-- 1 zkarajaz zkarajaz   299 Чт 8 май 2025 MSK_OPEN.C
+[Чт 8 май 2025 MSK] -RW-R--R-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKOG.C
+[Чт 8 май 2025 MSK] -RW-RW-R-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKS
+[Чт 8 май 2025 MSK] -RW-RW-R-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKSTFILE
+[Чт 8 май 2025 MSK] -RW-RW-R-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKSTFILE.TXT
+
+#4. S o r t - сортировка и / или слияние файлов
+#выводит отсортированный по алфавиту по первому полю список файлов
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l | sort
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   173 Чт 8 май 2025 MSKle_name.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   299 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile.txt
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 89031 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15968 Чт 8 май 2025 MSKle_name
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 16104 Чт 8 май 2025 MSK_open
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] total 156
+#сортирует по пятому полю (размер файла)
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l | sort -k5n
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile.txt
+[Чт 8 май 2025 MSK] total 1562
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   173 Чт 8 май 2025 MSKle_name.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   299 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15968 Чт 8 май 2025 MSKle_name
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 16104 Чт 8 май 2025 MSK_open
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 90020 Чт 8 май 2025 MSK1.log
+#сортирует по пятому полю в обратном числовом порядке
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l | sort -k5nr
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz 91010 Чт 8 май 2025 MSK1.log
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 16104 Чт 8 май 2025 MSK_open
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15968 Чт 8 май 2025 MSKle_name
+[Чт 8 май 2025 MSK] -rwxrwxr-x 1 zkarajaz zkarajaz 15960 Чт 8 май 2025 MSKllo
+[Чт 8 май 2025 MSK] -rwxr-xr-x 1 zkarajaz zkarajaz   725 Чт 8 май 2025 MSKg.sh
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   299 Чт 8 май 2025 MSK_open.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz   173 Чт 8 май 2025 MSKle_name.c
+[Чт 8 май 2025 MSK] -rw-r--r-- 1 zkarajaz zkarajaz    82 Чт 8 май 2025 MSKog.c
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz    18 Чт 8 май 2025 MSKs
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile
+[Чт 8 май 2025 MSK] -rw-rw-r-- 1 zkarajaz zkarajaz     0 Чт 8 май 2025 MSKstfile.txt
+[Чт 8 май 2025 MSK] total 160
+
+#5. U n i q  -  выдача информации о повторяющихся строках файла
+#выводит только повторяющиеся отсортированные размеры файлов из списка файлов в /usr/bin
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ ls -l /usr/bin | awk '{print $5}' | sort | uniq -d | head -n 50
+[Чт 8 май 2025 MSK] 10
+[Чт 8 май 2025 MSK] 1027128
+[Чт 8 май 2025 MSK] 11
+[Чт 8 май 2025 MSK] 12
+[Чт 8 май 2025 MSK] 13
+[Чт 8 май 2025 MSK] 133496
+[Чт 8 май 2025 MSK] 14
+[Чт 8 май 2025 MSK] 142312
+[Чт 8 май 2025 MSK] 14488
+[Чт 8 май 2025 MSK] 14568
+[Чт 8 май 2025 MSK] 14632
+[Чт 8 май 2025 MSK] 14640
+[Чт 8 май 2025 MSK] 14648
+[Чт 8 май 2025 MSK] 14656
+[Чт 8 май 2025 MSK] 14664
+[Чт 8 май 2025 MSK] 14712
+[Чт 8 май 2025 MSK] 14720
+[Чт 8 май 2025 MSK] 14728
+[Чт 8 май 2025 MSK] 14824
+[Чт 8 май 2025 MSK] 153928
+[Чт 8 май 2025 MSK] 1567
+[Чт 8 май 2025 MSK] 16
+[Чт 8 май 2025 MSK] 1674784
+[Чт 8 май 2025 MSK] 17
+[Чт 8 май 2025 MSK] 178608
+[Чт 8 май 2025 MSK] 18
+[Чт 8 май 2025 MSK] 18584
+[Чт 8 май 2025 MSK] 18656
+[Чт 8 май 2025 MSK] 18736
+[Чт 8 май 2025 MSK] 18744
+[Чт 8 май 2025 MSK] 18752
+[Чт 8 май 2025 MSK] 18808
+[Чт 8 май 2025 MSK] 18816
+[Чт 8 май 2025 MSK] 18824
+[Чт 8 май 2025 MSK] 18888
+[Чт 8 май 2025 MSK] 18904
+[Чт 8 май 2025 MSK] 19
+[Чт 8 май 2025 MSK] 191872
+[Чт 8 май 2025 MSK] 1962
+[Чт 8 май 2025 MSK] 2
+[Чт 8 май 2025 MSK] 20
+[Чт 8 май 2025 MSK] 21
+[Чт 8 май 2025 MSK] 215
+[Чт 8 май 2025 MSK] 22
+[Чт 8 май 2025 MSK] 22680
+[Чт 8 май 2025 MSK] 22832
+[Чт 8 май 2025 MSK] 22840
+[Чт 8 май 2025 MSK] 22848
+[Чт 8 май 2025 MSK] 22904
+[Чт 8 май 2025 MSK] 22912
+[Чт 8 май 2025 MSK] 22920
+[Чт 8 май 2025 MSK] 22928
+
+#6. C m p  - сравнение двух файлов
+#сравнивает файлы побайтно
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cmp program.c fopen.c
+[Чт 8 май 2025 MSK] program.c fopen.c differ: byte 20, line 2
+
+#7. D i f f  -  выявление различий между файлами
+#находит различия между файлами и сохраняет результат в файл eqv.
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ diff -e program.c fopen.c > eqv
+[Чт 8 май 2025 MSK]karaja@zkarajaz:/home/zkarajaz/Projects/Glebova_Victoria_lb1$ cat eqv
+[Чт 8 май 2025 MSK] 3c
+[Чт 8 май 2025 MSK]     char filename[256];
+[Чт 8 май 2025 MSK]     scanf("%s", filename); 
+[Чт 8 май 2025 MSK]     if (fopen(filename, "r")) {
+[Чт 8 май 2025 MSK]         printf("%s: файл %s открыт\n", filename, filename);
+[Чт 8 май 2025 MSK]     } else {
+[Чт 8 май 2025 MSK]         printf("%s: ошибка открытия %s\n", filename, filename);
+[Чт 8 май 2025 MSK]     }
+[Чт 8 май 2025 MSK] .
+[Чт 8 май 2025 MSK] 1a
+[Чт 8 май 2025 MSK] 
+[Чт 8 май 2025 MSK] .
